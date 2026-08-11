@@ -1,9 +1,9 @@
 /* ⚠️ Ce fichier s'appelle styleeee.css exprès — vérifie que ton <link> pointe bien dessus.
    Si ta page reste sans style au chargement, regarde l'onglet Réseau de l'inspecteur avant de paniquer. */
 :root {
-  --principale: #C1272D;
-  --secondaire: #4C7A3D;
-  --tertiaire: #E8B33D;
+  --principale: #E8B33D;
+  --secondaire: #C1272D;
+  --tertiaire: #4C7A3D;
   --quaternaire: #F5E9D6;
   --quinternaire: #2B2320;
   --titre: "Pacifico", cursive;
