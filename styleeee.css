@@ -1,18 +1,29 @@
 /* ⚠️ Ce fichier s'appelle styleeee.css exprès — vérifie que ton <link> pointe bien dessus.
    Si ta page reste sans style au chargement, regarde l'onglet Réseau de l'inspecteur avant de paniquer. */
+:root {
+  --principale: #C1272D;
+  --secondaire: #4C7A3D;
+  --tertiaire: #E8B33D;
+  --quaternaire: #F5E9D6;
+  --quinternaire: #2B2320;
+  --titre: "Pacifico", cursive;
+  --courant: "Nunito", sans-serif;
+
+}
+
 
 body {
-  background-color: #ffff00;
+  background-color: var(--tertiaire);
   font-family: Comic Sans MS, cursive;
-  margin: 0
+  margin: 0;
 }
 
 h1 {
-  color: lime;
-  font-size: 60px
-  text-shadow: 2px 2px black;
+  color: var(--secondaire);
+  font-size: 60px;
+  text-shadow: 2px 2px var(--quinternaire);
   text-align: center;
-  background: red;
+  background: var(--principale);
 }
 
 .nav {
@@ -95,7 +106,7 @@ button {
 }
 
 .menu-table td {
-  border: 1px solid grey
+  border: 1px solid grey;
   padding: 2px;
 }
 
@@ -151,7 +162,9 @@ form button {
 }
 
 @keyframes blink {
-  50% { opacity: 0 }
+  50% {
+    opacity: 0
+  }
 }
 
 .price {
