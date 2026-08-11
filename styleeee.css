@@ -15,7 +15,7 @@
 body {
   background-color: var(--tertiaire);
   font-family: Comic Sans MS, cursive;
-  margin: 0;
+  margin: 1;
 }
 
 h1 {
