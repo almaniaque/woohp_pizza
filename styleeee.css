@@ -18,29 +18,59 @@ body {
   margin: 1;
 }
 
-h1 {
-  color: var(--secondaire);
-  font-size: 60px;
-  text-shadow: 2px 2px var(--quinternaire);
-  text-align: center;
-  background: var(--principale);
-}
+
 
 .nav {
-  background-color: blue;
-  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondaire);
+  font-family: var( --courant);
+  padding: 15px 40px;
+  gap: 15px;
 }
+ 
+#logo {
+  height: 100px;
+  border-radius: 8px;
+  margin: 10px;
+}
+ 
+.menuAcceuil {
+  display: flex;
+  gap: 50px;
+}
+ 
+.menuAcceuil a {
+  text-decoration: none;
+  color: var(  --quinternaire);
+  font-size: 20px;
+  font-weight: bold;
+}
+ 
+.boutonAcceuil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+ 
+}
+ 
+.connexion {
+  background-color:   var(--quaternaire);
+  color: #1a1a1a;
+   border-radius: 8px;
+}
+ 
+.enregistrer {
+  background-color: var(--quinternaire);
+  color: #ffffff;
+   border-radius: 8px;
+ 
+}
+ 
 
-.nav a {
-  color: darkblue;
-  margin-right: 3px;
-  text-decoration: underline;
-  font-size: 11px;
-}
+ 
 
-.nav a {
-  color: red;
-}
 
 .hero {
   background-color: #ff00ff;
@@ -49,13 +79,19 @@ h1 {
   text-align: center;
 }
 
+
+
+#image {
+  width:100%;
+  height: 150%;
+
+}
+
 .hero h2 {
-  font-size: 45px;
   font-family: Papyrus;
 }
 
 .hero p {
-  font-size: 9px;
   color: orange;
 }
 
@@ -74,7 +110,6 @@ h1 {
 }
 
 .card h3 {
-  font-size: 12px;
   color: purple;
   background: pink;
 }
@@ -90,11 +125,11 @@ h1 {
 }
 
 button {
-  background: white;
+  background: var(--secondaire); /* ou une autre couleur de fond */
   color: white;
   border: none;
-  padding: 1px;
-  font-size: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
 }
 
 .menu-table {
@@ -133,29 +168,28 @@ button {
 }
 
 form {
-  background: black;
+  background-color:  var(--quaternaire);
   color: black;
-  padding: 10px;
+  width: 500px;
+  border : none;
+  border-radius: 5px;
+
 }
 
-form input {
-  width: 20px;
-  font-size: 6px;
-  margin-bottom: 0px
-}
-
-form button {
-  background: black;
-  color: black;
-}
 
 .footer {
-  background-color: black;
-  color: #111111;
-  padding: 100px 0px 0px 0px;
-  text-align: right;
+  background-color: var( --quaternaire);
+  display: flex;
+  flex-direction : row;
+  justify-content: space-around;
+  color: var(--quinternaire);
+  display: flex;
   font-size: 30px;
-}
+  padding: 20px;
+  font-family: var(--courant);
+
+} 
+
 
 .blink {
   animation: blink 1s infinite;
@@ -171,4 +205,64 @@ form button {
   color: yellow;
   background: white;
   font-size: 7px;
+}
+
+.contact{
+  display: flex;
+  gap: 15px;
+
+}
+
+ 
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+ 
+  #logo {
+    height: 70px;
+    margin: 5px;
+  }
+ 
+  .menuAcceuil {
+    justify-content: center;
+    gap: 20px;
+  }
+ 
+  .menuAcceuil a {
+    font-size: 16px;
+  }
+ 
+  .boutonAcceuil {
+    justify-content: center;
+    width: 100%;
+  }
+ 
+  .connexion{
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+ 
+ 
+  .enregistrer {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  
+  gap: 25px;
+
+}
+
+
+form{
+  width: 300px;
+}
+
 }
