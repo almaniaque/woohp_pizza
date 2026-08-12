@@ -41,7 +41,6 @@ body {
 h1 {
   color: var(--quinternaire);
   text-align: center;
-
   font-family: var(--titre);
 }
 
@@ -52,7 +51,7 @@ h1 {
 
 .connexion {
   background-color: var(--quaternaire);
-  color: #1a1a1a;
+  color: var(--quinternaire);
   border-radius: 8px;
 }
 
@@ -247,7 +246,7 @@ button {
 
 form {
   background-color: var(--quaternaire);
-  color: black;
+  color: var(--quinternaire);
 
   width: 500px;
   max-width: 100%;
