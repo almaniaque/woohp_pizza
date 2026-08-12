@@ -1,22 +1,37 @@
-/* ⚠️ Ce fichier s'appelle styleeee.css exprès — vérifie que ton <link> pointe bien dessus.
-   Si ta page reste sans style au chargement, regarde l'onglet Réseau de l'inspecteur avant de paniquer. */
 :root {
   --principale: #E8B33D;
   --secondaire: #C1272D;
   --tertiaire: #4C7A3D;
   --quaternaire: #F5E9D6;
   --quinternaire: #2B2320;
+
   --titre: "Pacifico", cursive;
   --courant: "Nunito", sans-serif;
+
   --gap: 24px;
   --margin: 12px;
 }
 
+.whoop {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   GLOBAL
+========================= */
 
 body {
   background-color: var(--quaternaire);
-  margin: 1;
+  margin: 0;
+  font-family: var(--courant);
+  background-color: var(--quaternaire);
 }
+
+
+/* =========================
+   TITRES
+========================= */
 
 h1 {
   color: var(--quinternaire);
@@ -25,123 +40,106 @@ h1 {
   font-family: var(--titre);
 }
 
-.nav {
-  background-color: var(--secondaire);
-  padding: 2px;
-}
 
-.nav a {
-  color: var(--quaternaire);
-  margin-right: 3px;
-  text-decoration: none;
+/* =========================
+   BOUTONS
+========================= */
 
-}
- 
 .connexion {
-  background-color:   var(--quaternaire);
+  background-color: var(--quaternaire);
   color: #1a1a1a;
-   border-radius: 8px;
+  border-radius: 8px;
 }
- 
+
 .enregistrer {
   background-color: var(--quinternaire);
   color: #ffffff;
-   border-radius: 8px;
- 
+  border-radius: 8px;
 }
- 
 
- 
+button {
+  background: var(--secondaire);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+}
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--secondaire);
+
+  font-family: var(--courant);
+
+  padding: 15px 40px;
+  gap: 15px;
+}
+
+#logo {
+  height: 100px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.menuAcceuil {
+  display: flex;
+  gap: 50px;
+}
+
+.menuAcceuil a {
+  text-decoration: none;
+  color: var(--quinternaire);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boutonAcceuil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   margin: var(--gap);
-  text-align: center;
-  gap: var(--gap);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 100vw;
 }
 
 .hero img {
-  width: 80vw;
+  max-width: 1030px;
+  width: 100%;
+  height: auto;
 }
 
 
-
-#image {
-  width:100%;
-  height: 150%;
-
-}
-
-.hero h2 {
-  font-family: var(--titre);
-  color: var(--quinternaire);
-}
-
-.hero p {
-  color: var(--quinternaire);
-}
-
-.hero2 {
-  margin: var(--gap);
-  width: 60vw;
-  display: flex;
-  justify-self: center;
-  height: 40vh;
-  gap: var(--gap);
-  text-align: center;
-}
-
-.hero2 img {
-  width: 50vw;
-  height: 30vh;
-}
+/* =========================
+   FAVORIS
+========================= */
 
 .favorite {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin-top: 24px;
   gap: 24px;
-
-}
-
-.carte {
-  margin: var(--gap);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 24px;
-  gap: 24px;
-  width: 80vw;
-}
-
-.card {
-  background-color: var(--tertiaire);
-  color: var(--quinternaire);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 40px;
-  width: 15vw;
-  gap: var(--gap);
-}
-
-.card1 {
-  background-color: var(--principale);
-  color: var(--quinternaire);
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  padding: 40px;
-  width: 80vw;
-  gap: var(--gap);
-
 }
 
 .fav {
@@ -149,66 +147,232 @@ h1 {
   flex-direction: column;
 }
 
-.card h3 {
+
+/* =========================
+   CARTES
+========================= */
+
+.carte {
+  margin: var(--gap);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 24px;
+
+  gap: 24px;
+  width: 90vw;
+}
+
+.card2 {
+  background-color: var(--tertiaire);
+  color: var(--quinternaire);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 40px;
+
+  width: 25vw;
+
+  gap: var(--gap);
+
+  border-radius: 16px;
+
+  box-sizing: border-box;
+}
+
+.card1 {
+  background-color: var(--principale);
+  color: var(--quinternaire);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 40px;
+
+  width: 80vw;
+
+  gap: var(--gap);
+
+  border-radius: 16px;
+
+  box-sizing: border-box;
+}
+
+.card1 h3,
+.card2 h3 {
   font-family: var(--titre);
 }
 
-.card1 h3 {
-  font-family: var(--titre);
-}
-
-.card,
-.card1 p {
+.card1 p,
+.card2 p {
   font-family: var(--courant);
 }
 
-
-.card img {
+.card2 img {
   width: 10vw;
   height: 20vh;
+  object-fit: contain;
 }
 
 .card1 img {
   width: 10vw;
   height: 20vh;
+  object-fit: contain;
 }
 
 .price {
   color: var(--secondaire);
 }
 
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+form {
+  background-color: var(--quaternaire);
+  color: black;
+
+  width: 500px;
+  max-width: 100%;
+
+  border: none;
+  border-radius: 5px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
-  background-color: var( --quaternaire);
+  background-color: var(--quaternaire);
+
   display: flex;
-  flex-direction : row;
+  flex-direction: row;
+
   justify-content: space-around;
+
   color: var(--quinternaire);
-  display: flex;
+
   font-size: 30px;
+
   padding: 20px;
+
   font-family: var(--courant);
+}
 
-} 
 
+/* =========================
+   MOBILE
+========================= */
 
-@media screen and (max-widht : 600px) {
-  .card {
-    width: 50vw;
+@media only screen and (max-width: 600px) {
 
+  .cards1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .cards {
-    width: 90vw;
+  .card1,
+  .card2 {
+    width: 100%;
+    padding: 20px;
   }
 
-  .card img {
-    width: 30vw;
-    height: 40vh;
+  .card1 {
+    flex-direction: column;
   }
 
-  .card1 img {
-    width: 30vw;
-    height: 40vh;
+  .card2 {
+    justify-content: center;
   }
 
+  .card1 img,
+  .card2 img {
+    width: 100%;
+
+    max-height: 250px;
+  }
+
+
+  /* NAVIGATION */
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 20px;
+  }
+
+  #logo {
+    height: 70px;
+    margin: 5px;
+  }
+
+  .menuAcceuil {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .menuAcceuil a {
+    font-size: 16px;
+  }
+
+  .boutonAcceuil {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .connexion,
+  .enregistrer {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+
+  /* FOOTER */
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+  }
+
+
+  /* FORMULAIRE */
+
+  form {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:600px) and (max-width: 1200px) {
+  .cards1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .card2 {
+    width: 45vw;
+    align-items: center;
+  }
 }
