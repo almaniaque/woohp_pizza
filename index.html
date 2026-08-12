@@ -14,13 +14,26 @@
 
   <!-- 🕵️ Easter egg n°1 : si tu lis ce commentaire, va dire à Wassila que t'as trouvé le premier oeuf caché, +1 point bonus -->
 
-  <header class="nav">
-    <a href="#">Accueil</a>
-    <a href="#">Menu</a>
-    <a href="#">A propos</a>
-    <a href="#">Contact</a>
-    <a href="#">Réservation en ligne cliquez ici</a>
+  <header>
+ 
+ <div class="nav">
+    <div>
+    <img src="/media/DA42DEBC-79E7-44CE-A432-870081A41DD0.PNG" alt="" id="logo"
+    ></div>
+    <div class="menuAcceuil">
+      <a href="#">Accueil</a>
+      <a href="#">Menu</a>
+      <a href="#">A propos</a>
+      <a href="#">Contact</a>
+    </div>
+ 
+   <div class="boutonAcceuil">
+   <button class="connexion"   type="btn">Se connecter</button>
+    <button class="enregistrer"   type="btn">S'enregistrer</button>
+</div>
+  </div>
   </header>
+ 
 
   <main>
     <section class="hero">
@@ -121,10 +134,50 @@
       </section>
     </section>
   </main>
-  <footer class="footer">
-    <p>Chez Mario - 12 rue du Kahoot - Tel: 01.23.45.67.89 - © 2026 tous droits ne sont pas réservés</p>
 
-    <!-- Easter egg n°3 : le dernier oeuf caché. Si t'as ouvert l'inspecteur jusqu'ici, t'es exactement le genre de dev qu'on veut former. -->
+ <footer class="footer">
+<div>
+    <img src="/media/DA42DEBC-79E7-44CE-A432-870081A41DD0.PNG" alt="" id="logo"
+    ></div>
+    <div>
+
+        
+    <article class="contact">
+     <button type="button"><i class="fa-solid fa-phone"></i></button>
+     <p> Tel: 01.23.45.67.89</p>
+      </article>
+      <article  class="contact">
+        <button type="button"><i class="fa-solid fa-pizza-slice"></i></button>
+        <p>12 rue du Kahoot</p>
+      </article>
+      <article  class="contact">
+       <button type="button"><i class="fa-solid fa-envelope"></i></button>
+        <p> whoop.pizza@gmail.com</p>
+      </article>
+    </div>
+
+
+    <form> 
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nom">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Prenom</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Prenom">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="adresse mail">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+    </form>
+
+
   </footer>
 </body>
 
