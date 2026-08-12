@@ -12,25 +12,26 @@
   --margin: 12px;
 }
 
-.whoop {
-  display: flex;
-  align-items: center;
-
-}
-
-.whoop h1 {
-  color: var(--quaternaire);
-}
 
 /* =========================
    GLOBAL
 ========================= */
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--quaternaire);
   margin: 0;
-  font-family: var(--courant);
+
   background-color: var(--quaternaire);
+  color: var(--quinternaire);
+
+  font-family: var(--courant);
 }
 
 
@@ -44,29 +45,46 @@ h1 {
   font-family: var(--titre);
 }
 
+.whoop {
+  display: flex;
+  align-items: center;
+}
+
+.whoop h1 {
+  color: var(--quaternaire);
+}
+
 
 /* =========================
    BOUTONS
 ========================= */
 
+button {
+  border: none;
+
+  padding: 8px 12px;
+
+  background-color: var(--secondaire);
+  color: var(--quaternaire);
+
+  font-family: inherit;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
 .connexion {
   background-color: var(--quaternaire);
   color: var(--quinternaire);
+
   border-radius: 8px;
 }
 
 .enregistrer {
   background-color: var(--quinternaire);
   color: var(--quaternaire);
-  border-radius: 8px;
-}
 
-button {
-  background: var(--secondaire);
-  color: var(--quaternaire);
-  border: none;
-  padding: 8px 12px;
-  font-size: 16px;
+  border-radius: 8px;
 }
 
 
@@ -79,18 +97,26 @@ button {
   justify-content: space-between;
   align-items: center;
 
+  gap: 15px;
+
+  padding: 15px 40px;
+
   background-color: var(--secondaire);
 
   font-family: var(--courant);
-
-  padding: 15px 40px;
-  gap: 15px;
 }
 
 #logo {
+  display: block;
+
+  width: 100px;
   height: 100px;
-  border-radius: 8px;
+
   margin: 10px;
+
+  border-radius: 8px;
+
+  object-fit: contain;
 }
 
 .menuAcceuil {
@@ -99,15 +125,18 @@ button {
 }
 
 .menuAcceuil a {
-  text-decoration: none;
   color: var(--quaternaire);
+
   font-size: 20px;
   font-weight: bold;
+
+  text-decoration: none;
 }
 
 .boutonAcceuil {
   display: flex;
   flex-wrap: wrap;
+
   gap: 15px;
 }
 
@@ -117,19 +146,28 @@ button {
 ========================= */
 
 .hero {
-  margin: var(--gap);
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  max-width: 100vw;
+  width: calc(100% - 48px);
+  max-width: 1030px;
+
+  margin: var(--gap) auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .hero img {
-  max-width: 1030px;
   width: 100%;
   height: auto;
+
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+
   border-radius: 16px;
 }
 
@@ -143,8 +181,9 @@ button {
   flex-direction: column;
   align-items: center;
 
-  margin-top: 24px;
   gap: 24px;
+
+  margin-top: 24px;
 }
 
 .fav {
@@ -158,62 +197,61 @@ button {
 ========================= */
 
 .carte {
-  margin: var(--gap);
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin: var(--gap);
 }
 
 .cards1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: min(90vw, 1400px);
 
   margin-top: 24px;
 
   gap: 24px;
-  width: 90vw;
+}
+
+.card1,
+.card2 {
+  border-radius: 16px;
+}
+
+.card1 {
+  display: flex;
+  align-items: center;
+
+  width: min(80vw, 1200px);
+
+  padding: 40px;
+
+  gap: var(--gap);
+
+  background-color: var(--principale);
+  color: var(--quinternaire);
 }
 
 .card2 {
-  background-color: var(--tertiaire);
-  color: var(--quaternaire);
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 40px;
-
-  width: 25vw;
-
-  gap: var(--gap);
-
-  border-radius: 16px;
-
-  box-sizing: border-box;
-}
-
-.card1 {
-  background-color: var(--principale);
-  color: var(--quinternaire);
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  min-width: 0;
 
   padding: 40px;
 
-  width: 80vw;
-
   gap: var(--gap);
 
-  border-radius: 16px;
-
-  box-sizing: border-box;
+  background-color: var(--tertiaire);
+  color: var(--quaternaire);
 }
 
+.card1 h2,
+.card2 h2,
 .card1 h3,
 .card2 h3 {
   font-family: var(--titre);
@@ -224,43 +262,53 @@ button {
   font-family: var(--courant);
 }
 
+
+/* =========================
+   IMAGES DES CARTES
+========================= */
+
+.card1 img,
 .card2 img {
-  width: 10vw;
-  height: 20vh;
+  width: 180px;
+  height: 180px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
 
   border-radius: 50%;
 }
 
-.card1 img {
-  width: 10vw;
-  height: 20vh;
 
-  border-radius: 50%;
-}
+/* =========================
+   PRIX
+========================= */
 
 .price {
   color: var(--quaternaire);
+  font-weight: bold;
 }
 
 .price1 {
   color: var(--tertiaire);
+  font-weight: bold;
 }
+
 
 /* =========================
    FORMULAIRE
 ========================= */
 
 form {
+  width: min(500px, 100%);
+
+  padding: 20px;
+
   background-color: var(--quaternaire);
   color: var(--quinternaire);
 
-  width: 500px;
-  max-width: 100%;
-
   border: none;
   border-radius: 5px;
-
-  box-sizing: border-box;
 }
 
 
@@ -269,20 +317,41 @@ form {
 ========================= */
 
 .footer {
-  background-color: var(--quaternaire);
-
   display: flex;
-  flex-direction: row;
-
   justify-content: space-around;
+  align-items: flex-start;
 
-  color: var(--quinternaire);
-
-  font-size: 30px;
+  gap: 30px;
 
   padding: 20px;
 
+  background-color: var(--quaternaire);
+  color: var(--quinternaire);
+
   font-family: var(--courant);
+  font-size: 30px;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+
+  .cards1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card2 {
+    align-items: center;
+  }
+
+  .card1 img,
+  .card2 img {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 
@@ -292,49 +361,24 @@ form {
 
 @media only screen and (max-width: 600px) {
 
-  .cards1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .card1,
-  .card2 {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .card1 {
-    flex-direction: column;
-  }
-
-  .card2 {
-    justify-content: center;
-  }
-
-  .card1 img,
-  .card2 img {
-    width: 100%;
-
-    max-height: 250px;
-  }
-
-
-  /* NAVIGATION */
-
   .nav {
     flex-direction: column;
     align-items: center;
+
     padding: 15px 20px;
   }
 
   #logo {
+    width: 70px;
     height: 70px;
+
     margin: 5px;
   }
 
   .menuAcceuil {
     justify-content: center;
+    flex-wrap: wrap;
+
     gap: 20px;
   }
 
@@ -344,13 +388,57 @@ form {
 
   .boutonAcceuil {
     justify-content: center;
+
     width: 100%;
   }
 
   .connexion,
   .enregistrer {
     padding: 8px 16px;
+
     font-size: 14px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    width: calc(100% - 32px);
+
+    margin: 16px auto;
+  }
+
+
+  /* CARTES */
+
+  .cards1 {
+    grid-template-columns: 1fr;
+
+    width: calc(100vw - 32px);
+  }
+
+  .card1,
+  .card2 {
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  .card1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card2 {
+    align-items: center;
+  }
+
+  .card1 img,
+  .card2 img {
+    width: 180px;
+    height: 180px;
+
+    max-width: 100%;
   }
 
 
@@ -361,27 +449,14 @@ form {
     align-items: center;
 
     gap: 25px;
+
+    font-size: 20px;
   }
 
 
   /* FORMULAIRE */
 
   form {
-    width: 300px;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:600px) and (max-width: 1200px) {
-  .cards1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    gap: 24px;
-  }
-
-  .card2 {
-    width: 45vw;
-    align-items: center;
+    width: min(100%, 350px);
   }
 }
