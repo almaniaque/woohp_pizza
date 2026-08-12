@@ -130,6 +130,7 @@ button {
   max-width: 1030px;
   width: 100%;
   height: auto;
+  border-radius: 16px;
 }
 
 
@@ -226,13 +227,15 @@ button {
 .card2 img {
   width: 10vw;
   height: 20vh;
-  object-fit: contain;
+
+  border-radius: 50%;
 }
 
 .card1 img {
   width: 10vw;
   height: 20vh;
-  object-fit: contain;
+
+  border-radius: 50%;
 }
 
 .price {
