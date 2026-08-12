@@ -15,6 +15,11 @@
 .whoop {
   display: flex;
   align-items: center;
+
+}
+
+.whoop h1 {
+  color: var(--quaternaire);
 }
 
 /* =========================
@@ -36,7 +41,7 @@ body {
 h1 {
   color: var(--quinternaire);
   text-align: center;
-  background: var(--secondaire);
+
   font-family: var(--titre);
 }
 
@@ -53,13 +58,13 @@ h1 {
 
 .enregistrer {
   background-color: var(--quinternaire);
-  color: #ffffff;
+  color: var(--quaternaire);
   border-radius: 8px;
 }
 
 button {
   background: var(--secondaire);
-  color: white;
+  color: var(--quaternaire);
   border: none;
   padding: 8px 12px;
   font-size: 16px;
@@ -96,7 +101,7 @@ button {
 
 .menuAcceuil a {
   text-decoration: none;
-  color: var(--quinternaire);
+  color: var(--quaternaire);
   font-size: 20px;
   font-weight: bold;
 }
@@ -315,7 +320,6 @@ form {
   .nav {
     flex-direction: column;
     align-items: center;
-
     padding: 15px 20px;
   }
 
