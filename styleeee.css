@@ -8,51 +8,33 @@
   --quinternaire: #2B2320;
   --titre: "Pacifico", cursive;
   --courant: "Nunito", sans-serif;
-
+  --gap: 24px;
+  --margin: 12px;
 }
 
 
 body {
-  background-color: var(--tertiaire);
-  font-family: Comic Sans MS, cursive;
+  background-color: var(--quaternaire);
   margin: 1;
 }
 
-
+h1 {
+  color: var(--quinternaire);
+  text-align: center;
+  background: var(--secondaire);
+  font-family: var(--titre);
+}
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: var(--secondaire);
-  font-family: var( --courant);
-  padding: 15px 40px;
-  gap: 15px;
+  padding: 2px;
 }
- 
-#logo {
-  height: 100px;
-  border-radius: 8px;
-  margin: 10px;
-}
- 
-.menuAcceuil {
-  display: flex;
-  gap: 50px;
-}
- 
-.menuAcceuil a {
+
+.nav a {
+  color: var(--quaternaire);
+  margin-right: 3px;
   text-decoration: none;
-  color: var(  --quinternaire);
-  font-size: 20px;
-  font-weight: bold;
-}
- 
-.boutonAcceuil {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
- 
+
 }
  
 .connexion {
@@ -73,10 +55,13 @@ body {
 
 
 .hero {
-  background-color: #ff00ff;
-  color: yellow;
-  padding: 5px;
+  margin: var(--gap);
   text-align: center;
+  gap: var(--gap);
+}
+
+.hero img {
+  width: 80vw;
 }
 
 
@@ -88,94 +73,109 @@ body {
 }
 
 .hero h2 {
-  font-family: Papyrus;
+  font-family: var(--titre);
+  color: var(--quinternaire);
 }
 
 .hero p {
-  color: orange;
+  color: var(--quinternaire);
+}
+
+.hero2 {
+  margin: var(--gap);
+  width: 60vw;
+  display: flex;
+  justify-self: center;
+  height: 40vh;
+  gap: var(--gap);
+  text-align: center;
+}
+
+.hero2 img {
+  width: 50vw;
+  height: 30vh;
+}
+
+.favorite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  gap: 24px;
+
+}
+
+.carte {
+  margin: var(--gap);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 24px;
+  width: 80vw;
 }
 
-.crad {
-  background-color: green;
-  color: green;
-  border: 5px dashed red;
-  margin: 0px 0px 0px 0px;
+.card {
+  background-color: var(--tertiaire);
+  color: var(--quinternaire);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 40px;
-  width: 900px;
-  float: left;
+  width: 15vw;
+  gap: var(--gap);
+}
+
+.card1 {
+  background-color: var(--principale);
+  color: var(--quinternaire);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 40px;
+  width: 80vw;
+  gap: var(--gap);
+
+}
+
+.fav {
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
-  color: purple;
-  background: pink;
+  font-family: var(--titre);
 }
 
-.card p {
-  font-size: 22px;
-  line-height: 0.7;
+.card1 h3 {
+  font-family: var(--titre);
 }
+
+.card,
+.card1 p {
+  font-family: var(--courant);
+}
+
 
 .card img {
-  width: 500px;
-  height: 50px;
+  width: 10vw;
+  height: 20vh;
 }
 
-button {
-  background: var(--secondaire); /* ou une autre couleur de fond */
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  font-size: 16px;
+.card1 img {
+  width: 10vw;
+  height: 20vh;
 }
 
-.menu-table {
-  width: 100%;
-  border: 1px solid black;
-  font-size: 10px;
-  color: white;
-  background: yellow;
+.price {
+  color: var(--secondaire);
 }
-
-.menu-table td {
-  border: 1px solid grey;
-  padding: 2px;
-}
-
-.avis {
-  background: purple;
-  color: purple;
-  padding: 20px;
-}
-
-.avis .item {
-  background: #ddd;
-  color: #ddd;
-  margin-bottom: 1px;
-  position: relative;
-  z-index: 1;
-}
-
-.avis .item span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: white;
-}
-
-form {
-  background-color:  var(--quaternaire);
-  color: black;
-  width: 500px;
-  border : none;
-  border-radius: 5px;
-
-}
-
 
 .footer {
   background-color: var( --quaternaire);
@@ -191,78 +191,24 @@ form {
 } 
 
 
-.blink {
-  animation: blink 1s infinite;
-}
+@media screen and (max-widht : 600px) {
+  .card {
+    width: 50vw;
 
-@keyframes blink {
-  50% {
-    opacity: 0
-  }
-}
-
-.price {
-  color: yellow;
-  background: white;
-  font-size: 7px;
-}
-
-.contact{
-  display: flex;
-  gap: 15px;
-
-}
-
- 
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
-  }
- 
-  #logo {
-    height: 70px;
-    margin: 5px;
-  }
- 
-  .menuAcceuil {
-    justify-content: center;
-    gap: 20px;
-  }
- 
-  .menuAcceuil a {
-    font-size: 16px;
-  }
- 
-  .boutonAcceuil {
-    justify-content: center;
-    width: 100%;
-  }
- 
-  .connexion{
-    padding: 8px 16px;
-    font-size: 14px;
-  }
- 
- 
-  .enregistrer {
-    padding: 8px 16px;
-    font-size: 14px;
   }
 
+  .cards {
+    width: 90vw;
+  }
 
-.footer{
-  display: flex;
-  flex-direction: column;
-  
-  gap: 25px;
+  .card img {
+    width: 30vw;
+    height: 40vh;
+  }
 
-}
-
-
-form{
-  width: 300px;
-}
+  .card1 img {
+    width: 30vw;
+    height: 40vh;
+  }
 
 }
