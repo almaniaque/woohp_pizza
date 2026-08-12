@@ -177,7 +177,7 @@ button {
 
 .card2 {
   background-color: var(--tertiaire);
-  color: var(--quinternaire);
+  color: var(--quaternaire);
 
   display: flex;
   flex-direction: column;
@@ -236,9 +236,12 @@ button {
 }
 
 .price {
-  color: var(--secondaire);
+  color: var(--quaternaire);
 }
 
+.price1 {
+  color: var(--tertiaire);
+}
 
 /* =========================
    FORMULAIRE
